@@ -1,875 +1,308 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>System Error</title>
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <style>
-        /* Base */
-        body {
-            color: #333;
-            font: 14px Verdana, "Helvetica Neue", helvetica, Arial, 'Microsoft YaHei', sans-serif;
-            margin: 0;
-            padding: 0 20px 20px;
-            word-break: break-word;
-        }
-        h1{
-            margin: 10px 0 0;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 32px;
-        }
-        h2{
-            color: #4288ce;
-            font-weight: 400;
-            padding: 6px 0;
-            margin: 6px 0 0;
-            font-size: 18px;
-            border-bottom: 1px solid #eee;
-        }
-        h3.subheading {
-            color: #4288ce;
-            margin: 6px 0 0;
-            font-weight: 400;
-        }
-        h3{
-            margin: 12px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        abbr{
-            cursor: help;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-        a{
-            color: #868686;
-            cursor: pointer;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        .line-error{
-            background: #f8cbcb;
-        }
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="canonical" href="https://australiavpn.github.io/free-proxy-for-trinidad-and-tobago/" />
+<link rel="icon" href="/assets/website/img/australiavpn/favicon.ico" type="image/x-icon"/>
+<title>特立尼达和多巴哥免费VPN服务器列表 | 实时更新高速匿名连接 - Free VPN Node, 第0页</title>
+<meta name="keywords" content="特立尼达和多巴哥免费VPN, 免费VPN服务器, 高速VPN连接, 匿名浏览, 解锁特立尼达和多巴哥内容, VPN列表, 实时更新" />
+<meta name="description" content="在 Free VPN Node 获取最新的特立尼达和多巴哥免费VPN服务器列表，支持高速、匿名连接，实时更新，帮助您安全访问受限内容，保护在线隐私。
+" />
+<link rel="stylesheet" href="/assets/website/css/australiavpn/style-starter.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/website/css/style.css">
 
-        .echo table {
-            width: 100%;
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E189GFGS63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        .echo pre {
-            padding: 16px;
-            overflow: auto;
-            font-size: 85%;
-            line-height: 1.45;
-            background-color: #f7f7f7;
-            border: 0;
-            border-radius: 3px;
-            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
-
-        .echo pre > pre {
-            padding: 0;
-            margin: 0;
-        }
-        /* Layout */
-        .col-md-3 {
-            width: 25%;
-        }
-        .col-md-9 {
-            width: 75%;
-        }
-        [class^="col-md-"] {
-            float: left;
-        }
-        .clearfix {
-            clear:both;
-        }
-        @media only screen 
-        and (min-device-width : 375px) 
-        and (max-device-width : 667px) { 
-            .col-md-3,
-            .col-md-9 {
-                width: 100%;
-            }
-        }
-        /* Exception Info */
-        .exception {
-            margin-top: 20px;
-        }
-        .exception .message{
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-bottom: 0 none;
-            line-height: 18px;
-            font-size:16px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-
-        .exception .code{
-            float: left;
-            text-align: center;
-            color: #fff;
-            margin-right: 12px;
-            padding: 16px;
-            border-radius: 4px;
-            background: #999;
-        }
-        .exception .source-code{
-            padding: 6px;
-            border: 1px solid #ddd;
-
-            background: #f9f9f9;
-            overflow-x: auto;
-
-        }
-        .exception .source-code pre{
-            margin: 0;
-        }
-        .exception .source-code pre ol{
-            margin: 0;
-            color: #4288ce;
-            display: inline-block;
-            min-width: 100%;
-            box-sizing: border-box;
-        font-size:14px;
-            font-family: "Century Gothic",Consolas,"Liberation Mono",Courier,Verdana;
-            padding-left: 48px;
-        }
-        .exception .source-code pre li{
-            border-left: 1px solid #ddd;
-            height: 18px;
-            line-height: 18px;
-        }
-        .exception .source-code pre code{
-            color: #333;
-            height: 100%;
-            display: inline-block;
-            border-left: 1px solid #fff;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace{
-            padding: 6px;
-            border: 1px solid #ddd;
-            border-top: 0 none;
-            line-height: 16px;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace ol{
-            margin: 12px;
-        }
-        .exception .trace ol li{
-            padding: 2px 4px;
-        }
-        .exception div:last-child{
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        /* Exception Variables */
-        .exception-var table{
-            width: 100%;
-            margin: 12px 0;
-            box-sizing: border-box;
-            table-layout:fixed;
-            word-wrap:break-word;            
-        }
-        .exception-var table caption{
-            text-align: left;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 6px 0;
-        }
-        .exception-var table caption small{
-            font-weight: 300;
-            display: inline-block;
-            margin-left: 10px;
-            color: #ccc;
-        }
-        .exception-var table tbody{
-            font-size: 13px;
-            font-family: Consolas,"Liberation Mono",Courier,"微软雅黑";
-        }
-        .exception-var table td{
-            padding: 0 6px;
-            vertical-align: top;
-            word-break: break-all;
-        }
-        .exception-var table td:first-child{
-            width: 28%;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-        .exception-var table td pre{
-            margin: 0;
-        }
-
-        /* Copyright Info */
-        .copyright{
-            margin-top: 24px;
-            padding: 12px 0;
-            border-top: 1px solid #eee;
-        }
-
-        /* SPAN elements with the classes below are added by prettyprint. */
-        pre.prettyprint .pln { color: #000 }  /* plain text */
-        pre.prettyprint .str { color: #080 }  /* string content */
-        pre.prettyprint .kwd { color: #008 }  /* a keyword */
-        pre.prettyprint .com { color: #800 }  /* a comment */
-        pre.prettyprint .typ { color: #606 }  /* a type name */
-        pre.prettyprint .lit { color: #066 }  /* a literal value */
-        /* punctuation, lisp open bracket, lisp close bracket */
-        pre.prettyprint .pun, pre.prettyprint .opn, pre.prettyprint .clo { color: #660 }
-        pre.prettyprint .tag { color: #008 }  /* a markup tag name */
-        pre.prettyprint .atn { color: #606 }  /* a markup attribute name */
-        pre.prettyprint .atv { color: #080 }  /* a markup attribute value */
-        pre.prettyprint .dec, pre.prettyprint .var { color: #606 }  /* a declaration; a variable name */
-        pre.prettyprint .fun { color: red }  /* a function name */
-    </style>
+  gtag('config', 'G-E189GFGS63');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="echo">
-            </div>
-        <div class="exception">
-    <div class="message">
-        
-            <div class="info">
-                <div>
-                    <h2>[0]&nbsp;<abbr title="think\exception\TemplateNotFoundException">TemplateNotFoundException</abbr> in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\view\driver\Think.php line 82">Think.php line 82</a></h2>
+
+<body id="home">
+    <section class=" w3l-header-4 header-sticky">
+    <header class="absolute-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                                <h1><a class="navbar-brand" href="/">
+                        Australia VPN                    </a></h1>
+                                <button class="navbar-toggler bg-gradient collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa icon-expand fa-bars"></span>
+                    <span class="fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/country/">国家列表</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/free-proxy/">免费代理</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/free-vpn/">免费VPN</a>
+                        </li>
+                    </ul>
                 </div>
-                <div><h1>模板文件不存在:E:\SVNRepositories\VPNGitPages\public/../application/index\view\australiavpn\index\country_vpn.html</h1></div>
-            </div>
-        
-    </div>
-	        <div class="source-code">
-            <pre class="prettyprint lang-php"><ol start="73"><li class="line-73"><code>     */
-</code></li><li class="line-74"><code>    public function fetch($template, $data = [], $config = [])
-</code></li><li class="line-75"><code>    {
-</code></li><li class="line-76"><code>        if ('' == pathinfo($template, PATHINFO_EXTENSION)) {
-</code></li><li class="line-77"><code>            // 获取模板文件名
-</code></li><li class="line-78"><code>            $template = $this-&gt;parseTemplate($template);
-</code></li><li class="line-79"><code>        }
-</code></li><li class="line-80"><code>        // 模板不存在 抛出异常
-</code></li><li class="line-81"><code>        if (!is_file($template)) {
-</code></li><li class="line-82"><code>            throw new TemplateNotFoundException('template not exists:' . $template, $template);
-</code></li><li class="line-83"><code>        }
-</code></li><li class="line-84"><code>        // 记录视图信息
-</code></li><li class="line-85"><code>        App::$debug &amp;&amp; Log::record('[ VIEW ] ' . $template . ' [ ' . var_export(array_keys($data), true) . ' ]', 'info');
-</code></li><li class="line-86"><code>        $this-&gt;template-&gt;fetch($template, $data, $config);
-</code></li><li class="line-87"><code>    }
-</code></li><li class="line-88"><code>
-</code></li><li class="line-89"><code>    /**
-</code></li><li class="line-90"><code>     * 渲染模板内容
-</code></li><li class="line-91"><code>     * @access public
-</code></li></ol></pre>
         </div>
-	        <div class="trace">
-            <h2>Call Stack</h2>
-            <ol>
-                <li>in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\view\driver\Think.php line 82">Think.php line 82</a></li>
-                                <li>
-                at <abbr title="think\view\driver\Think">Think</abbr>->fetch('<a class="toggle" title="E:\SVNRepositories\VPNGitPages\public/../application/index\view\australiavpn\index\country_vpn.html">E:\SVNRepositories\V...</a>', ['user' => <em>null</em>, 'site' => ['name' => 'CCGP', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => 'CCGP', 'cdnurl' => '', 'version' => 1748156224, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...], []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\View.php line 163">View.php line 163</a>                </li>
-                                <li>
-                at <abbr title="think\View">View</abbr>->fetch('<a class="toggle" title="australiavpn/index/country_vpn">australiavpn/index/c...</a>') in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\application\index\controller\Index.php line 346">Index.php line 346</a>                </li>
-                                <li>
-                at <abbr title="app\index\controller\Index">Index</abbr>->country_vpn()                </li>
-                                <li>
-                at <abbr title="ReflectionMethod">ReflectionMethod</abbr>->invokeArgs(<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 343">App.php line 343</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::invokeMethod([<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), 'country_vpn'], []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 611">App.php line 611</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::module(['index', 'index', 'country_vpn'], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...], <em>true</em>) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 456">App.php line 456</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::exec(['type' => 'module', 'module' => ['index', 'index', 'country_vpn']], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...]) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 139">App.php line 139</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::run() in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\start.php line 19">start.php line 19</a>                </li>
-                                <li>
-                at require('<a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\start.php">E:\SVNRepositories\V...</a>') in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\public\index.php line 23">index.php line 23</a>                </li>
-                            </ol>
+        </nav>
         </div>
-    </div>
-        
-    
-        <div class="exception-var">
-        <h2>Environment Variables</h2>
-                <div>
-                        <h3 class="subheading">GET Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>website_id</strong></div>
-                    <div class="col-md-9"><small>
-                        2                    </small></div>
+    </header>
+</section>
+<script src="/assets/website/js/frontend/australiavpn/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+<!--bootstrap working-->
+<script src="/assets/website/js/frontend/australiavpn/bootstrap.min.js"></script>
+<!-- //bootstrap working-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+$(function() {
+    $('.navbar-toggler').click(function() {
+        $('body').toggleClass('noscroll');
+    })
+});
+</script>
+    <section class="w3l-recent-work-hobbies" id="services">
+        <div class="recent-work ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>特立尼达和多巴哥免费VPN服务器指南：跨越数字国界，重塑网络自由</h1>
+<p>在当今数字环境日益复杂的背景下，网络隐私保护与内容自由访问已成为每一位互联网用户的基本需求。对于需要访问特立尼达和多巴哥本地资源或提升网络匿名性的用户而言，特立尼达和多巴哥VPN服务器无疑是理想的选择。而我们所提供的，是一套经过实时验证、格式灵活、兼容性强的免费VPN服务器列表——专为专业用户与高效部署而设计。</p>
+<h2>为什么选择我们的特立尼达和多巴哥VPN列表？——可靠性源于技术积累</h2>
+<p>作为VPN行业的技术提供方，我们的免费服务器列表具备以下三大核心优势：</p>
+<ul>
+    <li>✅ 实时数据更新
+        <ul>
+            <li>每 3分钟自动刷新，自动剔除失效节点</li>
+            <li>确保服务器连接信息始终准确、稳定、可用</li>
+        </ul>
+    </li>
+    <li>✅ 多格式输出支持
+        <ul>
+            <li>提供 JSON、CSV、TXT 三种格式</li>
+            <li>方便开发者集成自动化工具，也便于普通用户复制粘贴配置</li>
+        </ul>
+    </li>
+    <li>✅ 跨平台兼容性
+        <ul>
+            <li>适配所有主流操作系统：Windows、macOS、Linux、iOS、Android</li>
+            <li>同时支持各类VPN客户端与自定义配置软件</li>
+        </ul>
+    </li>
+</ul>
+<h3>核心功能：不仅是“连接”，更是完整的网络策略工具</h3>
+<p>借助我们的特立尼达和多巴哥VPN服务器，您可以：</p>
+<ul>
+    <li>? 畅享流媒体平台：如 Netflix、Crave、YouTube 上的特立尼达和多巴哥限定内容</li>
+    <li>? 解锁社交访问权限：绕过本地封锁，访问 Facebook、Instagram、X（原Twitter）等社交媒体</li>
+    <li>? 强化数据加密传输：防止公共Wi-Fi环境中敏感数据被窃取</li>
+    <li>?️‍♂️ 隐藏真实IP：提升匿名性，降低被网站跟踪与限速的风险</li>
+</ul>
+<h3>使用建议：免费VPN的正确打开方式</h3>
+<p>尽管我们的服务器经过精挑细选，但免费VPN在性能上仍有其客观限制。作为专家，我建议如下使用策略：</p>
+<table data-start="899" data-end="1191" class="w-fit min-w-(--thread-content-width)">
+    <thead data-start="899" data-end="955">
+        <tr data-start="899" data-end="955">
+            <th data-start="899" data-end="914" data-col-size="sm">风险类型</th>
+            <th data-start="914" data-end="955" data-col-size="sm">建议行为</th>
+        </tr>
+    </thead>
+    <tbody data-start="1021" data-end="1191">
+        <tr data-start="1021" data-end="1061">
+            <td data-start="1021" data-end="1034" data-col-size="sm">重要账户登录</td>
+            <td data-start="1034" data-end="1061" data-col-size="sm">使用付费VPN，避免在免费VPN上传输敏感数据</td>
+        </tr>
+        <tr data-start="1062" data-end="1103">
+            <td data-start="1062" data-end="1076" data-col-size="sm">访问速度慢</td>
+            <td data-start="1076" data-end="1103" data-col-size="sm">测试多个服务器，优先选择低延迟节点</td>
+        </tr>
+        <tr data-start="1104" data-end="1148">
+            <td data-start="1104" data-end="1117" data-col-size="sm">服务器被封锁</td>
+            <td data-start="1117" data-end="1148" data-col-size="sm">定期更换IP，或采用多重跳转VPN配置</td>
+        </tr>
+        <tr data-start="1149" data-end="1191">
+            <td data-start="1149" data-end="1162" data-col-size="sm">长期商业用途</td>
+            <td data-start="1162" data-end="1191" data-col-size="sm">不建议依赖免费方案，改用专业VPN服务</td>
+        </tr>
+    </tbody>
+</table>
+<h3>专家提示：免费 ≠ 不安全，但需“懂得如何使用”</h3>
+<p>免费VPN的最大优势是门槛低，但其劣势在于不稳定、速度不可控、缺乏服务支持。因此：</p>
+<ul>
+    <li>对于临时任务、短期绕过封锁、学习VPN技术的用户：我们的列表是高性价比之选。</li>
+    <li>对于远程办公、金融交易、长时间稳定连接需求的用户：请优先选择付费VPN服务商。</li>
+</ul>
+<h3>立即体验，特立尼达和多巴哥网络世界触手可及</h3>
+<p>无论您是希望解锁受限内容、还是寻求更安全的网络环境，我们的特立尼达和多巴哥免费VPN服务器列表都能助您一臂之力。</p>
+<p>点击获取实时更新的IP列表，搭配您信赖的VPN客户端，让数字边界不再成为障碍。</p>
+<p>?️ 网络自由，从一个特立尼达和多巴哥节点开始。</p>                    </div>
                 </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>country</strong></div>
-                    <div class="col-md-9"><small>
-                        trinidad-and-tobago                    </small></div>
+                <div class="row vpn-list">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>主机</th>
+                                <th>IP地址</th>
+                                <th>国家</th>
+                                <th>用户名</th>
+                                <th>密码</th>
+                                <th>速度</th>
+                                <th>运行时间</th>
+                                <th>延迟</th>
+                                <th>更新</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                    </tbody>
+                    </table>
+                                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>特立尼达和多巴哥代理服务器：通向数字自由的智能通行证</h2>
+<p>在数字世界中，地域封锁与内容限制已成为用户获取信息与享受全球化服务的一大障碍。而在这一背景下，特立尼达和多巴哥代理服务器不再只是一个连接工具，更是一把开启互联网自由的智能钥匙。</p>
+<p>通过隐藏真实IP地址并模拟本地化访问行为，特立尼达和多巴哥代理不仅在内容访问方面展现强大能力，同时在数据采集、网络研究与隐私防护等高价值场景中也发挥着越来越重要的作用。</p>
+<h3>为什么选择特立尼达和多巴哥代理？四大核心应用场景解析</h3>
+<p>作为网络代理专家，我们总结出以下四个最具代表性的使用场景，帮助用户从“工具”跃升到“战略资源”：</p>
+<ol>
+    <li>内容解锁利器
+        <ul>
+            <li>无障碍访问特立尼达和多巴哥地区限定的流媒体平台、新闻网站和电商服务</li>
+            <li>解锁YouTube、Crave、CBC等原生内容</li>
+        </ul>
+    </li>
+    <li>本地数据采集加速器
+        <ul>
+            <li>为市场调研、价格监控、SEO分析等任务提供真实特立尼达和多巴哥出口IP</li>
+            <li>减少因异地访问导致的数据偏差与屏蔽</li>
+        </ul>
+    </li>
+    <li>隐私保护加密层
+        <ul>
+            <li>适用于远程办公、敏感通信与跨境任务的匿名连接需求</li>
+            <li>规避公共Wi-Fi下的嗅探风险，保护用户身份不被追踪</li>
+        </ul>
+    </li>
+    <li>网络研究与测试平台
+        <ul>
+            <li>为学术研究与开发者提供观察特立尼达和多巴哥网络生态的理想节点</li>
+            <li>可模拟真实用户行为，进行CDN性能或本地广告投放测试</li>
+        </ul>
+    </li>
+</ol>
+<h3>技术核心：不仅免费，更智能、稳定、专业</h3>
+<p>我们对特立尼达和多巴哥代理节点的管理不仅强调“量”，更追求“质”与“可控性”。以下是我们三大核心技术优势：</p>
+<h4>? 智能刷新系统</h4>
+<ul>
+    <li>基于AI算法每 180秒自动检测代理池</li>
+    <li>实时剔除失效节点，确保超 95% 的在线可用率</li>
+</ul>
+<h4>? 协议矩阵支持</h4>
+<ul>
+    <li>HTTP/HTTPS：适合网页浏览、基础API请求</li>
+    <li>SOCKS4：兼顾兼容性与效率</li>
+    <li>SOCKS5：支持UDP协议与IPv6，适用于高匿名性任务如P2P或游戏加速</li>
+</ul>
+<h4>? 多维筛选引擎</h4>
+<ul>
+    <li>可根据 延迟（ms）、匿名等级、在线率 等多个维度进行筛选</li>
+    <li>方便用户精准选择最适合的代理节点，减少连接失败与速度瓶颈</li>
+</ul>
+<h3>性能使用建议：根据任务定制代理策略</h3>
+<p>作为代理技术顾问，我们基于大规模测试数据，为不同场景提供如下优化建议：</p>
+<table data-start="1110" data-end="1342" class="w-fit min-w-(--thread-content-width)">
+    <thead data-start="1110" data-end="1157">
+        <tr data-start="1110" data-end="1157">
+            <th data-start="1110" data-end="1125" data-col-size="sm">使用场景</th>
+            <th data-start="1125" data-end="1157" data-col-size="sm">推荐策略</th>
+        </tr>
+    </thead>
+    <tbody data-start="1214" data-end="1342">
+        <tr data-start="1214" data-end="1258">
+            <td data-start="1214" data-end="1226" data-col-size="sm">视频流媒体访问</td>
+            <td data-start="1226" data-end="1258" data-col-size="sm">选择延迟低于 <strong data-start="1235" data-end="1244">150ms</strong> 的 SOCKS5 节点</td>
+        </tr>
+        <tr data-start="1259" data-end="1295">
+            <td data-start="1259" data-end="1271" data-col-size="sm">大数据爬虫任务</td>
+            <td data-start="1271" data-end="1295" data-col-size="sm">使用<strong data-start="1275" data-end="1286">动态住宅代理池</strong>，避免被封IP</td>
+        </tr>
+        <tr data-start="1296" data-end="1342">
+            <td data-start="1296" data-end="1308" data-col-size="sm">即时通讯/远程办公</td>
+            <td data-start="1308" data-end="1342" data-col-size="sm">固定1-2个<strong data-start="1316" data-end="1332">高匿名（Elite）代理</strong>，确保连接连续性</td>
+        </tr>
+    </tbody>
+</table>
+<p>此外，我们还观察到一个颇具参考价值的网络现象：莫斯科节点在欧美黄金时段（UTC+3 18:00–24:00）表现出更佳的国际带宽，这可能与当地ISP的夜间流量调度策略有关。提示用户：灵活尝试不同地区出口节点，往往能带来意想不到的性能优化效果。</p>
+<h3>深层洞察：为什么特立尼达和多巴哥代理在全球网络中具有优势？</h3>
+<p>特立尼达和多巴哥拥有高质量的数据中心基础设施、稳定的法律环境与靠近美国的网络拓扑优势。这意味着，特立尼达和多巴哥代理在连接美国CDN、全球主流平台与北美区域服务时，具备延迟低、识别率低、屏蔽概率小等优势。</p>
+<h3>真正有价值的免费代理，不只是“能用”</h3>
+<p>选择特立尼达和多巴哥代理，绝非只是为了隐藏IP或突破封锁。它是您在数字时代实现内容自由、数据安全、技术研究与匿名操作的多功能通行证。</p>
+<p>使用建议：</p>
+<ul>
+    <li>?️ 安全第一：避免通过免费代理传输金融或敏感数据</li>
+    <li>? 定期更换IP：防止被目标网站识别与封锁</li>
+    <li>? 结合多地区节点：实现全球网络优化部署</li>
+</ul>
+<p>? **开始尝试吧！**使用我们持续更新、结构清晰的特立尼达和多巴哥代理列表，在保持匿名的同时拓展网络边界，真正做到技术为你所用，自由在握。</p>                    </div>
                 </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>page</strong></div>
-                    <div class="col-md-9"><small>
-                        0                    </small></div>
-                </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>POST Data</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
             </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Files</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
+        </div>
+    </section>
+        <section class="w3l-footer-29-main w3l-copyright">
+        <div class="container">
+            <div class="row bottom-copies">
+                <p class="col-lg-8 copy-footer-29">
+                    <a href="/">Australia VPN</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+                <div class="col-lg-4 main-social-footer-29">
+                    <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                    <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                </div>
             </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Cookies</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Session</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">Server/Request Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ALLUSERSPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Roaming                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>COMPUTERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ComSpec</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\cmd.exe                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DriverData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\System32\Drivers\DriverData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOCALAPPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Local                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>NUMBER_OF_PROCESSORS</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>OS</strong></div>
-                    <div class="col-md-9"><small>
-                        Windows_NT                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>Path</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATHEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_ARCHITECTURE</strong></div>
-                    <div class="col-md-9"><small>
-                        AMD64                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_IDENTIFIER</strong></div>
-                    <div class="col-md-9"><small>
-                        Intel64 Family 6 Model 158 Stepping 10, GenuineIntel                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_LEVEL</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_REVISION</strong></div>
-                    <div class="col-md-9"><small>
-                        9e0a                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PSModulePath</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PUBLIC</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Users\Public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemDrive</strong></div>
-                    <div class="col-md-9"><small>
-                        C:                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemRoot</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERDOMAIN</strong></div>
-                    <div class="col-md-9"><small>
-                        WORKGROUP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1$                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>windir</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_ACCEPT</strong></div>
-                    <div class="col-md-9"><small>
-                        */*                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_USER_AGENT</strong></div>
-                    <div class="col-md-9"><small>
-                        Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.98 Safari/537.36                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_HOST</strong></div>
-                    <div class="col-md-9"><small>
-                        vgp.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REDIRECT_STATUS</strong></div>
-                    <div class="col-md-9"><small>
-                        200                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        vgp.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        80                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        54022                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_SOFTWARE</strong></div>
-                    <div class="col-md-9"><small>
-                        nginx/1.15.11                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>GATEWAY_INTERFACE</strong></div>
-                    <div class="col-md-9"><small>
-                        CGI/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_SCHEME</strong></div>
-                    <div class="col-md-9"><small>
-                        http                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PROTOCOL</strong></div>
-                    <div class="col-md-9"><small>
-                        HTTP/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_ROOT</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/country_vpn                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/country_vpn?website_id=2&amp;country=trinidad-and-tobago&amp;page=0                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_LENGTH</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_TYPE</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_METHOD</strong></div>
-                    <div class="col-md-9"><small>
-                        GET                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>QUERY_STRING</strong></div>
-                    <div class="col-md-9"><small>
-                        website_id=2&amp;country=trinidad-and-tobago&amp;page=0                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_TRANSLATED</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public/index/index/country_vpn                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_INFO</strong></div>
-                    <div class="col-md-9"><small>
-                        /index/index/country_vpn                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_FILENAME</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public/index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FCGI_ROLE</strong></div>
-                    <div class="col-md-9"><small>
-                        RESPONDER                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PHP_SELF</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/country_vpn                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME_FLOAT</strong></div>
-                    <div class="col-md-9"><small>
-                        1748156224.9249                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1748156224                    </small></div>
-                </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Environment Variables</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">ThinkPHP Constants</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_VERSION</strong></div>
-                    <div class="col-md-9"><small>
-                        5.0.27                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1748156224.9253                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_MEM</strong></div>
-                    <div class="col-md-9"><small>
-                        409000                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DS</strong></div>
-                    <div class="col-md-9"><small>
-                        \                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LIB_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CORE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\think\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TRAIT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\traits\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ROOT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXTEND_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\extend\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>VENDOR_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\vendor\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>RUNTIME_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOG_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\log\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CACHE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\cache\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\temp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ENV_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        PHP_                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_CLI</strong></div>
-                    <div class="col-md-9"><small>
-                        false                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_WIN</strong></div>
-                    <div class="col-md-9"><small>
-                        true                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FILTER_VALIDATE_BOOL</strong></div>
-                    <div class="col-md-9"><small>
-                        258                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTMLPURIFIER_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\vendor\ezyang\htmlpurifier\library                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ADDON_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\addons\                    </small></div>
-                </div>
-                            </div>
-                    </div>
-            </div>
-    
-    <div class="copyright">
-        <a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a> 
-        <span>V5.0.27</span> 
-        <span>{ 十年磨一剑-为API开发设计的高性能框架 }</span>
-    </div>
-        <script>
-        var LINE = 82;
+        </div>
+    </section>
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-long-arrow-up"></span>
+    </button>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
 
-        function $(selector, node){
-            var elements;
-
-            node = node || document;
-            if(document.querySelectorAll){
-                elements = node.querySelectorAll(selector);
-            } else {
-                switch(selector.substr(0, 1)){
-                    case '#':
-                        elements = [node.getElementById(selector.substr(1))];
-                        break;
-                    case '.':
-                        if(document.getElementsByClassName){
-                            elements = node.getElementsByClassName(selector.substr(1));
-                        } else {
-                            elements = get_elements_by_class(selector.substr(1), node);
-                        }
-                        break;
-                    default:
-                        elements = node.getElementsByTagName();
-                }
-            }
-            return elements;
-
-            function get_elements_by_class(search_class, node, tag) {
-                var elements = [], eles, 
-                    pattern  = new RegExp('(^|\\s)' + search_class + '(\\s|$)');
-
-                node = node || document;
-                tag  = tag  || '*';
-
-                eles = node.getElementsByTagName(tag);
-                for(var i = 0; i < eles.length; i++) {
-                    if(pattern.test(eles[i].className)) {
-                        elements.push(eles[i])
-                    }
-                }
-
-                return elements;
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
         }
+    }
 
-        $.getScript = function(src, func){
-            var script = document.createElement('script');
-            
-            script.async  = 'async';
-            script.src    = src;
-            script.onload = func || function(){};
-            
-            $('head')[0].appendChild(script);
-        }
-
-        ;(function(){
-            var files = $('.toggle');
-            var ol    = $('ol', $('.prettyprint')[0]);
-            var li    = $('li', ol[0]);   
-
-            // 短路径和长路径变换
-            for(var i = 0; i < files.length; i++){
-                files[i].ondblclick = function(){
-                    var title = this.title;
-
-                    this.title = this.innerHTML;
-                    this.innerHTML = title;
-                }
-            }
-
-            // 设置出错行
-            var err_line = $('.line-' + LINE, ol[0])[0];
-            err_line.className = err_line.className + ' line-error';
-
-            $.getScript('//cdn.bootcss.com/prettify/r298/prettify.min.js', function(){
-                prettyPrint();
-
-                // 解决Firefox浏览器一个很诡异的问题
-                // 当代码高亮后，ol的行号莫名其妙的错位
-                // 但是只要刷新li里面的html重新渲染就没有问题了
-                if(window.navigator.userAgent.indexOf('Firefox') >= 0){
-                    ol[0].innerHTML = ol[0].innerHTML;
-                }
-            });
-
-        })();
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
-    </body>
+    <!-- /move top -->
+    <script src="/assets/website/js/frontend/base.js"></script>
+</body>
+
 </html>

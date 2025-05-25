@@ -1,976 +1,749 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>System Error</title>
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <style>
-        /* Base */
-        body {
-            color: #333;
-            font: 14px Verdana, "Helvetica Neue", helvetica, Arial, 'Microsoft YaHei', sans-serif;
-            margin: 0;
-            padding: 0 20px 20px;
-            word-break: break-word;
-        }
-        h1{
-            margin: 10px 0 0;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 32px;
-        }
-        h2{
-            color: #4288ce;
-            font-weight: 400;
-            padding: 6px 0;
-            margin: 6px 0 0;
-            font-size: 18px;
-            border-bottom: 1px solid #eee;
-        }
-        h3.subheading {
-            color: #4288ce;
-            margin: 6px 0 0;
-            font-weight: 400;
-        }
-        h3{
-            margin: 12px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        abbr{
-            cursor: help;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-        a{
-            color: #868686;
-            cursor: pointer;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        .line-error{
-            background: #f8cbcb;
-        }
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="canonical" href="https://australiavpn.github.io/free-proxy/page-129.htm" />
+<link rel="icon" href="/assets/website/img/australiavpn/favicon.ico" type="image/x-icon"/>
+<title>免费代理服务器列表 | 实时更新的全球HTTP/SOCKS代理 - Free VPN Node, 第129页</title>
+<meta name="keywords" content="免费代理服务器, HTTP代理, SOCKS4代理, SOCKS5代理, 实时更新代理, 全球代理IP, 匿名代理, 免费代理列表" />
+<meta name="description" content="Free VPN Node 提供全球范围内的免费HTTP、SOCKS4和SOCKS5代理服务器列表，每3分钟自动更新，确保代理的可用性和速度。支持多种协议，适用于浏览器、应用程序和软件，帮助用户实现匿名上网、突破地理限制，提升网络访问体验。" />
+<link rel="stylesheet" href="/assets/website/css/australiavpn/style-starter.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/website/css/style.css">
 
-        .echo table {
-            width: 100%;
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E189GFGS63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        .echo pre {
-            padding: 16px;
-            overflow: auto;
-            font-size: 85%;
-            line-height: 1.45;
-            background-color: #f7f7f7;
-            border: 0;
-            border-radius: 3px;
-            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
-
-        .echo pre > pre {
-            padding: 0;
-            margin: 0;
-        }
-        /* Layout */
-        .col-md-3 {
-            width: 25%;
-        }
-        .col-md-9 {
-            width: 75%;
-        }
-        [class^="col-md-"] {
-            float: left;
-        }
-        .clearfix {
-            clear:both;
-        }
-        @media only screen 
-        and (min-device-width : 375px) 
-        and (max-device-width : 667px) { 
-            .col-md-3,
-            .col-md-9 {
-                width: 100%;
-            }
-        }
-        /* Exception Info */
-        .exception {
-            margin-top: 20px;
-        }
-        .exception .message{
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-bottom: 0 none;
-            line-height: 18px;
-            font-size:16px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-
-        .exception .code{
-            float: left;
-            text-align: center;
-            color: #fff;
-            margin-right: 12px;
-            padding: 16px;
-            border-radius: 4px;
-            background: #999;
-        }
-        .exception .source-code{
-            padding: 6px;
-            border: 1px solid #ddd;
-
-            background: #f9f9f9;
-            overflow-x: auto;
-
-        }
-        .exception .source-code pre{
-            margin: 0;
-        }
-        .exception .source-code pre ol{
-            margin: 0;
-            color: #4288ce;
-            display: inline-block;
-            min-width: 100%;
-            box-sizing: border-box;
-        font-size:14px;
-            font-family: "Century Gothic",Consolas,"Liberation Mono",Courier,Verdana;
-            padding-left: 48px;
-        }
-        .exception .source-code pre li{
-            border-left: 1px solid #ddd;
-            height: 18px;
-            line-height: 18px;
-        }
-        .exception .source-code pre code{
-            color: #333;
-            height: 100%;
-            display: inline-block;
-            border-left: 1px solid #fff;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace{
-            padding: 6px;
-            border: 1px solid #ddd;
-            border-top: 0 none;
-            line-height: 16px;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace ol{
-            margin: 12px;
-        }
-        .exception .trace ol li{
-            padding: 2px 4px;
-        }
-        .exception div:last-child{
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        /* Exception Variables */
-        .exception-var table{
-            width: 100%;
-            margin: 12px 0;
-            box-sizing: border-box;
-            table-layout:fixed;
-            word-wrap:break-word;            
-        }
-        .exception-var table caption{
-            text-align: left;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 6px 0;
-        }
-        .exception-var table caption small{
-            font-weight: 300;
-            display: inline-block;
-            margin-left: 10px;
-            color: #ccc;
-        }
-        .exception-var table tbody{
-            font-size: 13px;
-            font-family: Consolas,"Liberation Mono",Courier,"微软雅黑";
-        }
-        .exception-var table td{
-            padding: 0 6px;
-            vertical-align: top;
-            word-break: break-all;
-        }
-        .exception-var table td:first-child{
-            width: 28%;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-        .exception-var table td pre{
-            margin: 0;
-        }
-
-        /* Copyright Info */
-        .copyright{
-            margin-top: 24px;
-            padding: 12px 0;
-            border-top: 1px solid #eee;
-        }
-
-        /* SPAN elements with the classes below are added by prettyprint. */
-        pre.prettyprint .pln { color: #000 }  /* plain text */
-        pre.prettyprint .str { color: #080 }  /* string content */
-        pre.prettyprint .kwd { color: #008 }  /* a keyword */
-        pre.prettyprint .com { color: #800 }  /* a comment */
-        pre.prettyprint .typ { color: #606 }  /* a type name */
-        pre.prettyprint .lit { color: #066 }  /* a literal value */
-        /* punctuation, lisp open bracket, lisp close bracket */
-        pre.prettyprint .pun, pre.prettyprint .opn, pre.prettyprint .clo { color: #660 }
-        pre.prettyprint .tag { color: #008 }  /* a markup tag name */
-        pre.prettyprint .atn { color: #606 }  /* a markup attribute name */
-        pre.prettyprint .atv { color: #080 }  /* a markup attribute value */
-        pre.prettyprint .dec, pre.prettyprint .var { color: #606 }  /* a declaration; a variable name */
-        pre.prettyprint .fun { color: red }  /* a function name */
-    </style>
+  gtag('config', 'G-E189GFGS63');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="echo">
-            </div>
-        <div class="exception">
-    <div class="message">
-        
-            <div class="info">
-                <div>
-                    <h2>[0]&nbsp;<abbr title="think\exception\TemplateNotFoundException">TemplateNotFoundException</abbr> in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\view\driver\Think.php line 82">Think.php line 82</a></h2>
+
+<body id="home">
+    <section class=" w3l-header-4 header-sticky">
+    <header class="absolute-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                                <h1><a class="navbar-brand" href="/">
+                        Australia VPN                    </a></h1>
+                                <button class="navbar-toggler bg-gradient collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa icon-expand fa-bars"></span>
+                    <span class="fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/country/">国家列表</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/free-proxy/">免费代理</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/free-vpn/">免费VPN</a>
+                        </li>
+                    </ul>
                 </div>
-                <div><h1>模板文件不存在:E:\SVNRepositories\VPNGitPages\public/../application/index\view\australiavpn\index\proxy.html</h1></div>
-            </div>
-        
-    </div>
-	        <div class="source-code">
-            <pre class="prettyprint lang-php"><ol start="73"><li class="line-73"><code>     */
-</code></li><li class="line-74"><code>    public function fetch($template, $data = [], $config = [])
-</code></li><li class="line-75"><code>    {
-</code></li><li class="line-76"><code>        if ('' == pathinfo($template, PATHINFO_EXTENSION)) {
-</code></li><li class="line-77"><code>            // 获取模板文件名
-</code></li><li class="line-78"><code>            $template = $this-&gt;parseTemplate($template);
-</code></li><li class="line-79"><code>        }
-</code></li><li class="line-80"><code>        // 模板不存在 抛出异常
-</code></li><li class="line-81"><code>        if (!is_file($template)) {
-</code></li><li class="line-82"><code>            throw new TemplateNotFoundException('template not exists:' . $template, $template);
-</code></li><li class="line-83"><code>        }
-</code></li><li class="line-84"><code>        // 记录视图信息
-</code></li><li class="line-85"><code>        App::$debug &amp;&amp; Log::record('[ VIEW ] ' . $template . ' [ ' . var_export(array_keys($data), true) . ' ]', 'info');
-</code></li><li class="line-86"><code>        $this-&gt;template-&gt;fetch($template, $data, $config);
-</code></li><li class="line-87"><code>    }
-</code></li><li class="line-88"><code>
-</code></li><li class="line-89"><code>    /**
-</code></li><li class="line-90"><code>     * 渲染模板内容
-</code></li><li class="line-91"><code>     * @access public
-</code></li></ol></pre>
         </div>
-	        <div class="trace">
-            <h2>Call Stack</h2>
-            <ol>
-                <li>in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\view\driver\Think.php line 82">Think.php line 82</a></li>
-                                <li>
-                at <abbr title="think\view\driver\Think">Think</abbr>->fetch('<a class="toggle" title="E:\SVNRepositories\VPNGitPages\public/../application/index\view\australiavpn\index\proxy.html">E:\SVNRepositories\V...</a>', ['user' => <em>null</em>, 'site' => ['name' => 'CCGP', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => 'CCGP', 'cdnurl' => '', 'version' => 1748155942, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...], []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\View.php line 163">View.php line 163</a>                </li>
-                                <li>
-                at <abbr title="think\View">View</abbr>->fetch('<a class="toggle" title="australiavpn/index/proxy">australiavpn/index/p...</a>') in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\application\index\controller\Index.php line 156">Index.php line 156</a>                </li>
-                                <li>
-                at <abbr title="app\index\controller\Index">Index</abbr>->proxy()                </li>
-                                <li>
-                at <abbr title="ReflectionMethod">ReflectionMethod</abbr>->invokeArgs(<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 343">App.php line 343</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::invokeMethod([<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), 'proxy'], []) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 611">App.php line 611</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::module(['index', 'index', 'proxy'], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...], <em>true</em>) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 456">App.php line 456</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::exec(['type' => 'module', 'module' => ['index', 'index', 'proxy']], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...]) in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\library\think\App.php line 139">App.php line 139</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::run() in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\start.php line 19">start.php line 19</a>                </li>
-                                <li>
-                at require('<a class="toggle" title="E:\SVNRepositories\VPNGitPages\thinkphp\start.php">E:\SVNRepositories\V...</a>') in <a class="toggle" title="E:\SVNRepositories\VPNGitPages\public\index.php line 23">index.php line 23</a>                </li>
-                            </ol>
+        </nav>
         </div>
-    </div>
-        
-    
-        <div class="exception-var">
-        <h2>Environment Variables</h2>
-                <div>
-                        <h3 class="subheading">GET Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>website_id</strong></div>
-                    <div class="col-md-9"><small>
-                        2                    </small></div>
+    </header>
+</section>
+<script src="/assets/website/js/frontend/australiavpn/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+<!--bootstrap working-->
+<script src="/assets/website/js/frontend/australiavpn/bootstrap.min.js"></script>
+<!-- //bootstrap working-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+$(function() {
+    $('.navbar-toggler').click(function() {
+        $('body').toggleClass('noscroll');
+    })
+});
+</script>
+    <section class="w3l-recent-work-hobbies" id="services">
+        <div class="recent-work ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>? 全球领先的免费代理服务器资源平台</h1>
+<p>作为网络隐私与访问控制领域的技术专家，我们致力于为用户提供一流的免费代理资源。我们的平台汇集了互联网上最新、最稳定的 HTTP(S)、SOCKS4 和 SOCKS5 免费代理服务器，可广泛应用于各种设备和网络场景中。</p>
+<h2>? 实时更新，数据精准可靠</h2>
+<p>我们部署了高性能的自动化系统，每日扫描并校验超过100万个代理节点，确保数据的新鲜度与有效性。所有代理列表每3分钟自动更新一次，让您始终掌握可用代理，避免因失效IP而影响使用体验。</p>
+<h3>? 高效筛选，按需选择</h3>
+<p>我们为用户提供便捷的筛选器，您可以根据以下维度精准过滤所需代理：</p>
+<ul>
+    <li>匿名等级（透明/普通/高匿名）</li>
+    <li>协议类型（HTTP、SOCKS4、SOCKS5）</li>
+    <li>地理位置（国家或地区）</li>
+    <li>延迟、稳定性、速度等性能指标</li>
+</ul>
+<p>无论您是进行跨境数据抓取、访问受限内容，还是提升匿名性，我们都能为您匹配最合适的免费代理资源。</p>
+<h3>✅ 免费开放，灵活兼容</h3>
+<p>所有代理均完全免费，无需注册，即可与浏览器、应用程序、脚本工具等无缝集成使用。无论是常规网络访问，还是需要一定隐私保护的操作，都能快速部署，立即上手。</p>
+<p>立即体验我们专业级的免费代理服务，保障您的网络自由、安全与效率。</p>                    </div>
                 </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>page</strong></div>
-                    <div class="col-md-9"><small>
-                        129                    </small></div>
+                <div class="row vpn-list">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>IP地址</th>
+                                <th>端口号</th>
+                                <th>用户名</th>
+                                <th>密码</th>
+                                <th>国家</th>
+                                <th>协议</th>
+                                <th>Anonymity</th>
+                                <th>速度</th>
+                                <th>运行时间</th>
+                                <th>回复</th>
+                                <th>延迟</th>
+                                <th>更新</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                        <tr>
+                                <td>222.127.255.21</td>
+                                <td>9999</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-philippines/" title="菲律宾">
+                                        <img width="20" height="20" alt="菲律宾" src="/uploads/flag/philippines.svg">
+                                        PH                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4591 ms</td>
+                                <td>301 ms</td>
+                                <td>5 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>89.45.83.82</td>
+                                <td>8128</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-romania/" title="罗马尼亚">
+                                        <img width="20" height="20" alt="罗马尼亚" src="/uploads/flag/romania.svg">
+                                        RO                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>65%</td>
+                                <td>4591 ms</td>
+                                <td>32 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>38.127.179.194</td>
+                                <td>11537</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4591 ms</td>
+                                <td>86 ms</td>
+                                <td>4 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>5.160.186.110</td>
+                                <td>5678</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-iran/" title="伊朗">
+                                        <img width="20" height="20" alt="伊朗" src="/uploads/flag/iran.svg">
+                                        IR                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>94%</td>
+                                <td>4591 ms</td>
+                                <td>95 ms</td>
+                                <td>282 ms</td>
+                            </tr>
+                                                        <tr>
+                                <td>149.20.253.102</td>
+                                <td>12551</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4592 ms</td>
+                                <td>110 ms</td>
+                                <td>4 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>139.162.238.184</td>
+                                <td>12297</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-kingdom/" title="英国">
+                                        <img width="20" height="20" alt="英国" src="/uploads/flag/united-kingdom.svg">
+                                        GB                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4592 ms</td>
+                                <td>14 ms</td>
+                                <td>3 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>5.196.124.208</td>
+                                <td>58588</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-france/" title="法国">
+                                        <img width="20" height="20" alt="法国" src="/uploads/flag/france.svg">
+                                        FR                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>53%</td>
+                                <td>4592 ms</td>
+                                <td>16 ms</td>
+                                <td>5 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>175.6.140.135</td>
+                                <td>38801</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-china/" title="中国">
+                                        <img width="20" height="20" alt="中国" src="/uploads/flag/china.svg">
+                                        CN                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>91%</td>
+                                <td>4592 ms</td>
+                                <td>265 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>37.131.164.39</td>
+                                <td>59341</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-poland/" title="波兰">
+                                        <img width="20" height="20" alt="波兰" src="/uploads/flag/poland.svg">
+                                        PL                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4592 ms</td>
+                                <td>34 ms</td>
+                                <td>51 sec</td>
+                            </tr>
+                                                        <tr>
+                                <td>104.25.0.65</td>
+                                <td>80</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-canada/" title="加拿大">
+                                        <img width="20" height="20" alt="加拿大" src="/uploads/flag/canada.svg">
+                                        CA                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4592 ms</td>
+                                <td>8 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>188.18.10.140</td>
+                                <td>5678</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-russia/" title="俄罗斯">
+                                        <img width="20" height="20" alt="俄罗斯" src="/uploads/flag/russia.svg">
+                                        RU                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>67%</td>
+                                <td>4592 ms</td>
+                                <td>81 ms</td>
+                                <td>3 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>159.65.242.254</td>
+                                <td>7497</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>86%</td>
+                                <td>4592 ms</td>
+                                <td>89 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>147.161.177.132</td>
+                                <td>10272</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-germany/" title="德国">
+                                        <img width="20" height="20" alt="德国" src="/uploads/flag/germany.svg">
+                                        DE                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4593 ms</td>
+                                <td>10 ms</td>
+                                <td>7 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>138.2.116.87</td>
+                                <td>65530</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-south-korea/" title="韩国">
+                                        <img width="20" height="20" alt="韩国" src="/uploads/flag/south-korea.svg">
+                                        KR                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>98%</td>
+                                <td>4593 ms</td>
+                                <td>225 ms</td>
+                                <td>4 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>103.113.3.238</td>
+                                <td>4145</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-indonesia/" title="印度尼西亚">
+                                        <img width="20" height="20" alt="印度尼西亚" src="/uploads/flag/indonesia.svg">
+                                        ID                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>94%</td>
+                                <td>4593 ms</td>
+                                <td>240 ms</td>
+                                <td>4 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>61.140.235.226</td>
+                                <td>1080</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-china/" title="中国">
+                                        <img width="20" height="20" alt="中国" src="/uploads/flag/china.svg">
+                                        CN                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>36%</td>
+                                <td>4593 ms</td>
+                                <td>249 ms</td>
+                                <td>6 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>27.123.3.138</td>
+                                <td>4145</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-indonesia/" title="印度尼西亚">
+                                        <img width="20" height="20" alt="印度尼西亚" src="/uploads/flag/indonesia.svg">
+                                        ID                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>99%</td>
+                                <td>4593 ms</td>
+                                <td>256 ms</td>
+                                <td>3 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>195.64.232.33</td>
+                                <td>5678</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-ukraine/" title="乌克兰">
+                                        <img width="20" height="20" alt="乌克兰" src="/uploads/flag/ukraine.svg">
+                                        UA                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>99%</td>
+                                <td>4593 ms</td>
+                                <td>43 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>31.13.33.4</td>
+                                <td>8080</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-russia/" title="俄罗斯">
+                                        <img width="20" height="20" alt="俄罗斯" src="/uploads/flag/russia.svg">
+                                        RU                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4593 ms</td>
+                                <td>44 ms</td>
+                                <td>2 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>203.24.103.17</td>
+                                <td>80</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-virgin-islands-british/" title="维尔京群岛，英国">
+                                        <img width="20" height="20" alt="维尔京群岛，英国" src="/uploads/flag/virgin-islands-british.svg">
+                                        VG                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4593 ms</td>
+                                <td>7 ms</td>
+                                <td>8 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>51.75.233.122</td>
+                                <td>49623</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-france/" title="法国">
+                                        <img width="20" height="20" alt="法国" src="/uploads/flag/france.svg">
+                                        FR                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4593 ms</td>
+                                <td>71 ms</td>
+                                <td>51 sec</td>
+                            </tr>
+                                                        <tr>
+                                <td>135.125.56.179</td>
+                                <td>25165</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-france/" title="法国">
+                                        <img width="20" height="20" alt="法国" src="/uploads/flag/france.svg">
+                                        FR                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4594 ms</td>
+                                <td>10 ms</td>
+                                <td>1 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>35.185.202.12</td>
+                                <td>80</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4594 ms</td>
+                                <td>145 ms</td>
+                                <td>7 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>172.67.253.69</td>
+                                <td>80</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-canada/" title="加拿大">
+                                        <img width="20" height="20" alt="加拿大" src="/uploads/flag/canada.svg">
+                                        CA                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4594 ms</td>
+                                <td>4 ms</td>
+                                <td>5 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>95.79.99.159</td>
+                                <td>44068</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-russia/" title="俄罗斯">
+                                        <img width="20" height="20" alt="俄罗斯" src="/uploads/flag/russia.svg">
+                                        RU                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>99%</td>
+                                <td>4594 ms</td>
+                                <td>50 ms</td>
+                                <td>7 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>216.80.120.100</td>
+                                <td>3820</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks5</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>99%</td>
+                                <td>4595 ms</td>
+                                <td>114 ms</td>
+                                <td>3 sec</td>
+                            </tr>
+                                                        <tr>
+                                <td>103.127.23.10</td>
+                                <td>5678</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-india/" title="印度">
+                                        <img width="20" height="20" alt="印度" src="/uploads/flag/india.svg">
+                                        IN                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4595 ms</td>
+                                <td>130 ms</td>
+                                <td>3 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>162.240.21.140</td>
+                                <td>55851</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-united-states/" title="美国">
+                                        <img width="20" height="20" alt="美国" src="/uploads/flag/united-states.svg">
+                                        US                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>100%</td>
+                                <td>4595 ms</td>
+                                <td>133 ms</td>
+                                <td>1 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>120.27.14.145</td>
+                                <td>80</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-china/" title="中国">
+                                        <img width="20" height="20" alt="中国" src="/uploads/flag/china.svg">
+                                        CN                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>91%</td>
+                                <td>4595 ms</td>
+                                <td>176 ms</td>
+                                <td>6 min</td>
+                            </tr>
+                                                        <tr>
+                                <td>61.7.138.57</td>
+                                <td>5678</td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td><span>****</span> <img src="/uploads/flag/eye-off.svg" alt="eye off" width="20" height="20" alt="hidden text" data-text="no need" class="js_openeyes"></td>
+                                <td>
+                                    <a href="/free-proxy-for-thailand/" title="泰国">
+                                        <img width="20" height="20" alt="泰国" src="/uploads/flag/thailand.svg">
+                                        TH                                    </a>
+                                </td>
+                                <td>socks4</td>
+                                <td>elite (HIA)</td>
+                                <td>1 ms</td>
+                                <td>81%</td>
+                                <td>4595 ms</td>
+                                <td>202 ms</td>
+                                <td>4 min</td>
+                            </tr>
+                                                    </tbody>
+                    </table>
+                    <ul class="pagination"><li><a href="/free-proxy/page-128.htm">&laquo;</a></li> <li><a href="/free-proxy/">1</a></li><li><a href="/free-proxy/page-2.htm">2</a></li><li class="disabled"><span>...</span></li><li><a href="/free-proxy/page-126.htm">126</a></li><li><a href="/free-proxy/page-127.htm">127</a></li><li><a href="/free-proxy/page-128.htm">128</a></li><li class="active"><span>129</span></li><li><a href="/free-proxy/page-130.htm">130</a></li><li><a href="/free-proxy/page-131.htm">131</a></li><li><a href="/free-proxy/page-132.htm">132</a></li><li class="disabled"><span>...</span></li><li><a href="/free-proxy/page-224.htm">224</a></li><li><a href="/free-proxy/page-225.htm">225</a></li> <li><a href="/free-proxy/page-130.htm">&raquo;</a></li></ul>                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>免费代理服务器指南：工作机制与专业选择建议</h2>
+<p>免费代理列表为用户提供了更换IP、绕过地理限制、规避请求频率限制等便利，广泛用于数据抓取、匿名浏览与自动化操作等场景。然而，由于其稳定性和安全性波动较大，精确筛选合适的代理尤为关键。</p>
+<h3>如何评估和选择优质代理？</h3>
+<ol>
+    <li>响应时间（Ping）
+        低延迟（&lt;100ms）代理适合对实时性要求高的场景，如自动化脚本、网页浏览等。响应时间是衡量代理性能的重要指标。 </li> <li>2. 协议类型
+            <ul>
+                <li>HTTP/HTTPS：适用于普通网页访问与基本爬虫任务。</li>
+                <li>SOCKS4/5：支持更广泛的协议（如UDP），更适合P2P下载、绕过防火墙或复杂网络环境。</li>
+            </ul>
+    </li>
+    <li>匿名性等级
+        <ul>
+            <li>透明代理：不隐藏用户IP，主要用于缓存或简单请求。</li>
+            <li>普通匿名代理：隐藏IP但可能暴露代理行为。</li>
+            <li>高匿名（Elite）代理：完全隐藏身份，适合对隐私高度敏感的任务。</li>
+        </ul>
+    </li>
+    <li>带宽与速度
+        <p>免费代理带宽有限，容易拥堵。若涉及大量数据传输（如爬虫、大量API请求），需优先选择高速、高带宽节点。</p>
+    </li>
+    <li>稳定性（正常运行时间）
+        <p>建议选择运行时间高于99%的代理，避免中途断线影响长期任务执行。</p>
+    </li>
+    <li>验证方式
+        <p>部分代理设有IP白名单或账户验证机制，虽然安全性更高，但会影响部署效率。</p>
+    </li>
+</ol>
+<h3>免费代理的适用场景与限制</h3>
+<p>虽然免费代理易于获取且成本为零，但其适用性应限于以下场景：</p>
+<ul>
+    <li>短期用途：如测试IP轮换、访问受限内容、规避轻量封锁。</li>
+    <li>低风险操作：如普通网页浏览、公开数据爬取。</li>
+    <li>学习研究：用于了解代理协议、测试自动化工具等。</li>
+</ul>
+<p>⚠️ 注意：不建议在免费代理上进行账号登录、交易操作或传输敏感数据。对于这类任务，应优先考虑付费VPN、住宅代理或私有服务器代理。</p>
+<h3>专业建议</h3>
+<p>免费代理是一把双刃剑。合理使用它们可以节省成本、提升效率，但必须配合安全措施（如HTTPS、指纹保护、VPN搭配使用）来降低被跟踪和攻击的风险。对于企业级或高安全性的项目，请始终选择稳定、加密强、身份验证完善的解决方案。</p>                    </div>
                 </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>POST Data</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
             </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Files</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
+        </div>
+    </section>
+        <section class="w3l-footer-29-main w3l-copyright">
+        <div class="container">
+            <div class="row bottom-copies">
+                <p class="col-lg-8 copy-footer-29">
+                    <a href="/">Australia VPN</a> 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+                <div class="col-lg-4 main-social-footer-29">
+                    <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                    <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                </div>
             </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Cookies</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Session</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">Server/Request Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ALLUSERSPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Roaming                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>COMPUTERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ComSpec</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\cmd.exe                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DriverData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\System32\Drivers\DriverData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOCALAPPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Local                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>NUMBER_OF_PROCESSORS</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>OS</strong></div>
-                    <div class="col-md-9"><small>
-                        Windows_NT                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>Path</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATHEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_ARCHITECTURE</strong></div>
-                    <div class="col-md-9"><small>
-                        AMD64                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_IDENTIFIER</strong></div>
-                    <div class="col-md-9"><small>
-                        Intel64 Family 6 Model 158 Stepping 10, GenuineIntel                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_LEVEL</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_REVISION</strong></div>
-                    <div class="col-md-9"><small>
-                        9e0a                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PSModulePath</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PUBLIC</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Users\Public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemDrive</strong></div>
-                    <div class="col-md-9"><small>
-                        C:                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemRoot</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERDOMAIN</strong></div>
-                    <div class="col-md-9"><small>
-                        WORKGROUP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1$                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>windir</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_ACCEPT</strong></div>
-                    <div class="col-md-9"><small>
-                        */*                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_USER_AGENT</strong></div>
-                    <div class="col-md-9"><small>
-                        Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.98 Safari/537.36                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_HOST</strong></div>
-                    <div class="col-md-9"><small>
-                        vgp.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REDIRECT_STATUS</strong></div>
-                    <div class="col-md-9"><small>
-                        200                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        vgp.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        80                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        60569                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_SOFTWARE</strong></div>
-                    <div class="col-md-9"><small>
-                        nginx/1.15.11                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>GATEWAY_INTERFACE</strong></div>
-                    <div class="col-md-9"><small>
-                        CGI/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_SCHEME</strong></div>
-                    <div class="col-md-9"><small>
-                        http                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PROTOCOL</strong></div>
-                    <div class="col-md-9"><small>
-                        HTTP/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_ROOT</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/proxy                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/proxy?website_id=2&amp;page=129                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_LENGTH</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_TYPE</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_METHOD</strong></div>
-                    <div class="col-md-9"><small>
-                        GET                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>QUERY_STRING</strong></div>
-                    <div class="col-md-9"><small>
-                        website_id=2&amp;page=129                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_TRANSLATED</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public/index/index/proxy                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_INFO</strong></div>
-                    <div class="col-md-9"><small>
-                        /index/index/proxy                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_FILENAME</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/VPNGitPages/public/index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FCGI_ROLE</strong></div>
-                    <div class="col-md-9"><small>
-                        RESPONDER                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PHP_SELF</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/proxy                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME_FLOAT</strong></div>
-                    <div class="col-md-9"><small>
-                        1748155942.8437                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1748155942                    </small></div>
-                </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Environment Variables</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">ThinkPHP Constants</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_VERSION</strong></div>
-                    <div class="col-md-9"><small>
-                        5.0.27                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1748155942.8441                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_MEM</strong></div>
-                    <div class="col-md-9"><small>
-                        408872                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DS</strong></div>
-                    <div class="col-md-9"><small>
-                        \                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LIB_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CORE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\think\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TRAIT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\thinkphp\library\traits\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ROOT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXTEND_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\extend\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>VENDOR_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\vendor\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>RUNTIME_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOG_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\log\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CACHE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\cache\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\runtime\temp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ENV_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        PHP_                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_CLI</strong></div>
-                    <div class="col-md-9"><small>
-                        false                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_WIN</strong></div>
-                    <div class="col-md-9"><small>
-                        true                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FILTER_VALIDATE_BOOL</strong></div>
-                    <div class="col-md-9"><small>
-                        258                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTMLPURIFIER_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\vendor\ezyang\htmlpurifier\library                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ADDON_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\VPNGitPages\addons\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_ELEMENT</strong></div>
-                    <div class="col-md-9"><small>
-                        1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_COMMENT</strong></div>
-                    <div class="col-md-9"><small>
-                        2                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_TEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        3                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_ENDTAG</strong></div>
-                    <div class="col-md-9"><small>
-                        4                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_ROOT</strong></div>
-                    <div class="col-md-9"><small>
-                        5                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_TYPE_UNKNOWN</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_QUOTE_DOUBLE</strong></div>
-                    <div class="col-md-9"><small>
-                        0                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_QUOTE_SINGLE</strong></div>
-                    <div class="col-md-9"><small>
-                        1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_QUOTE_NO</strong></div>
-                    <div class="col-md-9"><small>
-                        3                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_BEGIN</strong></div>
-                    <div class="col-md-9"><small>
-                        0                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_END</strong></div>
-                    <div class="col-md-9"><small>
-                        1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_QUOTE</strong></div>
-                    <div class="col-md-9"><small>
-                        2                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_SPACE</strong></div>
-                    <div class="col-md-9"><small>
-                        3                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_TEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        4                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_INNER</strong></div>
-                    <div class="col-md-9"><small>
-                        5                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_OUTER</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HDOM_INFO_ENDSPACE</strong></div>
-                    <div class="col-md-9"><small>
-                        7                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DEFAULT_TARGET_CHARSET</strong></div>
-                    <div class="col-md-9"><small>
-                        UTF-8                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DEFAULT_BR_TEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        
-                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DEFAULT_SPAN_TEXT</strong></div>
-                    <div class="col-md-9"><small>
-                                             </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>MAX_FILE_SIZE</strong></div>
-                    <div class="col-md-9"><small>
-                        600000                    </small></div>
-                </div>
-                            </div>
-                    </div>
-            </div>
-    
-    <div class="copyright">
-        <a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a> 
-        <span>V5.0.27</span> 
-        <span>{ 十年磨一剑-为API开发设计的高性能框架 }</span>
-    </div>
-        <script>
-        var LINE = 82;
+        </div>
+    </section>
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-long-arrow-up"></span>
+    </button>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
 
-        function $(selector, node){
-            var elements;
-
-            node = node || document;
-            if(document.querySelectorAll){
-                elements = node.querySelectorAll(selector);
-            } else {
-                switch(selector.substr(0, 1)){
-                    case '#':
-                        elements = [node.getElementById(selector.substr(1))];
-                        break;
-                    case '.':
-                        if(document.getElementsByClassName){
-                            elements = node.getElementsByClassName(selector.substr(1));
-                        } else {
-                            elements = get_elements_by_class(selector.substr(1), node);
-                        }
-                        break;
-                    default:
-                        elements = node.getElementsByTagName();
-                }
-            }
-            return elements;
-
-            function get_elements_by_class(search_class, node, tag) {
-                var elements = [], eles, 
-                    pattern  = new RegExp('(^|\\s)' + search_class + '(\\s|$)');
-
-                node = node || document;
-                tag  = tag  || '*';
-
-                eles = node.getElementsByTagName(tag);
-                for(var i = 0; i < eles.length; i++) {
-                    if(pattern.test(eles[i].className)) {
-                        elements.push(eles[i])
-                    }
-                }
-
-                return elements;
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
         }
+    }
 
-        $.getScript = function(src, func){
-            var script = document.createElement('script');
-            
-            script.async  = 'async';
-            script.src    = src;
-            script.onload = func || function(){};
-            
-            $('head')[0].appendChild(script);
-        }
-
-        ;(function(){
-            var files = $('.toggle');
-            var ol    = $('ol', $('.prettyprint')[0]);
-            var li    = $('li', ol[0]);   
-
-            // 短路径和长路径变换
-            for(var i = 0; i < files.length; i++){
-                files[i].ondblclick = function(){
-                    var title = this.title;
-
-                    this.title = this.innerHTML;
-                    this.innerHTML = title;
-                }
-            }
-
-            // 设置出错行
-            var err_line = $('.line-' + LINE, ol[0])[0];
-            err_line.className = err_line.className + ' line-error';
-
-            $.getScript('//cdn.bootcss.com/prettify/r298/prettify.min.js', function(){
-                prettyPrint();
-
-                // 解决Firefox浏览器一个很诡异的问题
-                // 当代码高亮后，ol的行号莫名其妙的错位
-                // 但是只要刷新li里面的html重新渲染就没有问题了
-                if(window.navigator.userAgent.indexOf('Firefox') >= 0){
-                    ol[0].innerHTML = ol[0].innerHTML;
-                }
-            });
-
-        })();
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
-    </body>
+    <!-- /move top -->
+    <script src="/assets/website/js/frontend/base.js"></script>
+</body>
+
 </html>
